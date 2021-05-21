@@ -32,8 +32,7 @@ Route::get("user/product/search", "ProductController@search");
 Route::get("user/productDetail/{id}", "ProductDetailController@show");
 
 // ===========================Information User============================== //
-Route::get("user/info", "UserInfoController@show");
-Route::post("user/info/update", "UserInfoController@update");
+Route::resource('user/info', "UserInfoController");
 
 Route::middleware('auth')->group(function () {
     // ===========================Shopping Cart============================== //
